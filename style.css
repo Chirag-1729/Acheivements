@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.achievements-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.achievements-section h1 {
+  font-size: 2.5rem;
+  color: #ffbd39;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(255, 189, 57, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.lightbox-caption {
+  color: #ffbd39;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
